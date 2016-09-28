@@ -1,0 +1,997 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="这十几天做了一个静态单页-英文网站(点这里)，巩固了html、css、javascript知识以及切图技巧，遇到过很多坑。这里我记录下，为以后工作积累经验
+HTML命名1通过psd原设计图分析：页面可以分为顶部(top) 顶部(header) 导航(nav) 内容区(content) 底部(footer)
+注意事项:
+1.id选择器#和类选择器.的使用场景2.命名规范:根据每块元素的主题 或者功能">
+<meta property="og:type" content="article">
+<meta property="og:title" content="实例：一个英文网站">
+<meta property="og:url" content="http://yoursite.com/2016/09/26/page1/index.html">
+<meta property="og:site_name" content="A Front-end Developer">
+<meta property="og:description" content="这十几天做了一个静态单页-英文网站(点这里)，巩固了html、css、javascript知识以及切图技巧，遇到过很多坑。这里我记录下，为以后工作积累经验
+HTML命名1通过psd原设计图分析：页面可以分为顶部(top) 顶部(header) 导航(nav) 内容区(content) 底部(footer)
+注意事项:
+1.id选择器#和类选择器.的使用场景2.命名规范:根据每块元素的主题 或者功能">
+<meta property="og:image" content="http://oe0rugm7g.bkt.clouddn.com/demo1/1.png">
+<meta property="og:image" content="http://oe0rugm7g.bkt.clouddn.com/demo1/2.png">
+<meta property="og:image" content="http://oe0rugm7g.bkt.clouddn.com/demo1/3.png">
+<meta property="og:image" content="http://oe0rugm7g.bkt.clouddn.com/demo1/4.png">
+<meta property="og:image" content="http://oe0rugm7g.bkt.clouddn.com/demo1/5.png">
+<meta property="og:image" content="http://oe0rugm7g.bkt.clouddn.com/demo1/6.png">
+<meta property="og:image" content="http://oe0rugm7g.bkt.clouddn.com/demo1/7.png">
+<meta property="og:image" content="http://oe0rugm7g.bkt.clouddn.com/demo1/8.png">
+<meta property="og:image" content="http://oe0rugm7g.bkt.clouddn.com/demo1/6.png">
+<meta property="og:updated_time" content="2016-09-26T09:23:39.349Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="实例：一个英文网站">
+<meta name="twitter:description" content="这十几天做了一个静态单页-英文网站(点这里)，巩固了html、css、javascript知识以及切图技巧，遇到过很多坑。这里我记录下，为以后工作积累经验
+HTML命名1通过psd原设计图分析：页面可以分为顶部(top) 顶部(header) 导航(nav) 内容区(content) 底部(footer)
+注意事项:
+1.id选择器#和类选择器.的使用场景2.命名规范:根据每块元素的主题 或者功能">
+<meta name="twitter:image" content="http://oe0rugm7g.bkt.clouddn.com/demo1/1.png">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"always"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/09/26/page1/"/>
+
+  <title> 实例：一个英文网站 | A Front-end Developer </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">A Front-end Developer</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-guestbook">
+          <a href="/guestbook" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            留言
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                实例：一个英文网站
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-09-26T14:23:20+08:00" content="2016-09-26">
+              2016-09-26
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/09/26/page1/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/26/page1/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>这十几天做了一个静态单页-<a href="http:/demo1" target="_blank" rel="external"><strong>英文网站</strong></a>(点这里)，巩固了html、css、javascript知识以及切图技巧，遇到过很多坑。这里我记录下，为以后工作积累经验</p>
+<h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><h3 id="命名"><a href="#命名" class="headerlink" title="命名"></a>命名</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">通过psd原设计图分析：页面可以分为顶部(top) 顶部(header) 导航(nav) 内容区(content) 底部(footer)</div></pre></td></tr></table></figure>
+<p>注意事项:</p>
+<h3 id="1-id选择器-和类选择器-的使用场景"><a href="#1-id选择器-和类选择器-的使用场景" class="headerlink" title="1.id选择器#和类选择器.的使用场景"></a>1.id选择器#和类选择器.的使用场景</h3><h3 id="2-命名规范"><a href="#2-命名规范" class="headerlink" title="2.命名规范:"></a>2.命名规范:</h3><p>根据每块元素的主题 或者功能、在页面上的位置命名，每个单词中间以“_”隔开或者从第二个单词开始每个单词的首字母大写（写包含样式的时候能找到这个元素并且不影响其他元素即可）</p>
+<p>常见单词：</p>
+<pre><code>登录条：loginBar         标志：logo              侧栏：sideBar        
+子导航subNav              广告：banner            导航：nav
+菜单：menu               子菜单：subMenu         搜索：search
+滚动：scroll             页面主体：main          内容：content 
+标签页：tab              文章列表：list          提示信息：msg
+小技巧：tips             栏目标题：title         加入：joinus
+指南：guild              服务：service          热点：hot
+新闻：news               下载：download         注册：regsiter 
+状态：status             按钮：btn              投票：vote 
+合作伙伴：partner        友情链接：friendLink    页脚：footer 
+版权：copyRight          外　套：wrap           
+版 权：copyRight         商　标：label           
+标　题：title             顶导航：topnav 
+边导航：sidebar          左导航：leftsideBar  
+右导航：rightsideBar          标　语：banner             当前：current
+菜单内容1： menu1Content      菜单容量：　menuContainer  子菜单：submenu      
+边导航图标：sidebarIcon       注释：note                内容：content 
+面包屑：breadCrumb(即页面所处位置导航提示)               功能区：shop(如购物车，收银台)
+容器：container              搜索：search              登陆：login  
+</code></pre><h3 id="3-技巧"><a href="#3-技巧" class="headerlink" title="3.技巧"></a>3.技巧</h3><p>三层嵌套：背景两边有圆角或阴影（不用css3属性如border-radius或box-shadow），要求自适应宽高</p>
+<p><img src="http://oe0rugm7g.bkt.clouddn.com/demo1/1.png" alt=""></p>
+<pre><code>`&lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;strong&gt;&lt;span&gt;HOME&lt;/span&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;`
+</code></pre><p><img src="http://oe0rugm7g.bkt.clouddn.com/demo1/2.png" alt=""></p>
+<pre><code>`&lt;div id=&quot;content&quot;&gt;
+    &lt;div id=&quot;content_top&quot;&gt;
+        &lt;div id=&quot;content_bottom&quot;&gt;`
+</code></pre><p><img src="http://oe0rugm7g.bkt.clouddn.com/demo1/3.png" alt=""></p>
+<pre><code>`&lt;h2&gt;&lt;strong&gt;&lt;span&gt;Browse Categories&lt;/span&gt;&lt;/strong&gt;&lt;/h2&gt;`
+</code></pre><p><img src="http://oe0rugm7g.bkt.clouddn.com/demo1/4.png" alt=""></p>
+<pre><code>`&lt;div class=&quot;list&quot;&gt;
+                   &lt;ul&gt;`
+</code></pre><p><img src="http://oe0rugm7g.bkt.clouddn.com/demo1/5.png" alt=""></p>
+<pre><code>`div class=&quot;module_join&quot;&gt;
+             &lt;div class=&quot;module_join_t&quot;&gt;
+                    &lt;div class=&quot;module_join_b&quot;&gt;`
+</code></pre><p><img src="http://oe0rugm7g.bkt.clouddn.com/demo1/6.png" alt=""></p>
+<pre><code>`&lt;div class=&quot;scroll_wrap&quot;&gt;
+             &lt;div class=&quot;scroll_wrap_l&quot;&gt;
+                    &lt;div id=&quot;run1&quot;class=&quot;scroll_wrap_r&quot;&gt;`
+</code></pre><p>html布局配合js：</p>
+<p><img src="http://oe0rugm7g.bkt.clouddn.com/demo1/7.png" alt=""></p>
+<pre><code>`&lt;div id=&quot;ad&quot;&gt;
+            &lt;a href=&quot;javascript:;&quot; class=&quot;prev&quot;&gt;&lt;/a&gt;
+            &lt;a href=&quot;javascript:;&quot; class=&quot;next&quot;&gt;&lt;/a&gt;
+            &lt;span class=&quot;prev_bg&quot;&gt;&lt;/span&gt;
+            &lt;span class=&quot;next_bg&quot;&gt;&lt;/span&gt;
+            &lt;ul&gt;
+                &lt;li style=&quot;filter:alpha(opacity=100); opacity:1;&quot;&gt;&lt;a href=&quot;#a1&quot;&gt;&lt;img src=&quot;http://oe0rugm7g.bkt.clouddn.com/images/banner/1.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#a2&quot;&gt;&lt;img src=&quot;http://oe0rugm7g.bkt.clouddn.com/images/banner/2.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#a3&quot;&gt;&lt;img src=&quot;http://oe0rugm7g.bkt.clouddn.com/images/banner/3.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;h2&gt;PRODUCT TITLE&lt;/h2&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras suscipit lacus dapibus ante mattis in adipiscing nibh placerat. Cras bibendum porta diam, non dignissim sapien malesuada vitae.&lt;/p&gt;
+            &lt;div class=&quot;bg&quot;&gt;&lt;/div&gt;
+ &lt;/div&gt;`
+</code></pre><p><img src="http://oe0rugm7g.bkt.clouddn.com/demo1/8.png" alt=""></p>
+<pre><code>`&lt;dd&gt;
+      &lt;h2&gt;Ascending&lt;/h2&gt;
+      &lt;a href=&quot;javascript:;&quot;&gt;&lt;/a&gt;
+      &lt;ul&gt;
+         &lt;li&gt;menu1&lt;/li&gt;
+         &lt;li&gt;menu2&lt;/li&gt;
+         &lt;li&gt;menu3&lt;/li&gt;
+      &lt;/ul&gt;
+ &lt;/dd&gt;`
+</code></pre><p><img src="http://oe0rugm7g.bkt.clouddn.com/demo1/6.png" alt=""></p>
+<pre><code>`&lt;div id=&quot;run1&quot; class=&quot;scroll_wrap_r&quot;&gt;
+    &lt;a class=&quot;prev&quot; href=&quot;javascript:;&quot;&gt;&lt;/a&gt;
+    &lt;a class=&quot;next&quot; href=&quot;javascript:;&quot;&gt;&lt;/a&gt;
+    &lt;div class=&quot;list_wrap&quot;&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;http://oe0rugm7g.bkt.clouddn.com/images/scroll_pic/1.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+                &lt;p&gt;Elegant MP3 player skin PSD download&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;http://oe0rugm7g.bkt.clouddn.com/images/scroll_pic/2.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+                &lt;p&gt;Download shopping bag &amp; icons (PSD &amp; PNG)&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;http://oe0rugm7g.bkt.clouddn.com/images/scroll_pic/3.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+                &lt;p&gt;High resolution abstract bokeh background&lt;/p&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;`
+</code></pre><h2 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h2><h3 id="1-样式重置："><a href="#1-样式重置：" class="headerlink" title="1.样式重置："></a>1.样式重置：</h3><p>做到有标签就加否则就不加，勿滥用通配选择符*</p>
+<pre><code>`body,h1,h2,h3,h4,h5,h6,p,dl,dd,ul,ol,form,input,textarea,th,td,select{
+    margin:0;
+    padding: 0;
+}
+em{ font-style:normal; }
+li{list-style:none;}
+a{ text-decoration:none; }
+img{ border:none; vertical-align:top; }
+table{ border-collapse:collapse; } 表格的两边框合并为一条
+input,textarea{ outline:none; }  去掉chrome 浏览器 input textarea 获取焦点后边框
+textarea{ resize: none; overflow: auto; } 关闭 textarea手动拖拉改变长宽和右侧滚动条
+body{ font-size:; font-family:&quot;&quot;; }
+`
+</code></pre><h3 id="2-清除浮动："><a href="#2-清除浮动：" class="headerlink" title="2.清除浮动："></a>2.清除浮动：</h3><pre><code>`.clear{ zoom:1;/*有宽能触发zoom就不用加*/ }
+ .clear:after{ content: &apos;&apos;; display: table; clear: both; };`
+</code></pre><h3 id="3-绝对定位居中："><a href="#3-绝对定位居中：" class="headerlink" title="3.绝对定位居中："></a>3.绝对定位居中：</h3><pre><code>`position: absolute;left: 50%; top: ; margin-left:-自身宽度的一半`
+</code></pre><h3 id="4-定位position："><a href="#4-定位position：" class="headerlink" title="4.定位position："></a>4.定位position：</h3><p>absolute static relative fixed inherit</p>
+<pre><code>position值为absolute：
+
+`该元素将变为块级元素，相当于给该元素设置了 display: block;（给一个内联元素，如 &lt;span&gt; ，设置 absolute 之后发现它可以设置宽高了）`
+`如果该元素是块级元素，元素的宽度由原来的 width: 100%（占据一行），变为了 auto`
+</code></pre><p>More info:<a href="http://geekplux.com/2014/04/25/several_core_concepts_of_css.html" target="_blank" rel="external">CSS最核心几个概念</a></p>
+<h3 id="5-三层嵌套css"><a href="#5-三层嵌套css" class="headerlink" title="5.三层嵌套css"></a>5.三层嵌套css</h3><pre><code>`先是中间平铺，接着是左右（都设置高度）或者上下（都设置宽度）`
+</code></pre><h3 id="6-兼容ie6："><a href="#6-兼容ie6：" class="headerlink" title="6.兼容ie6："></a>6.兼容ie6：</h3><pre><code>`css里面的数字最好是偶数这样会省掉很多麻烦，少使用hack技术`
+`input加行高  curson:pointer  鼠标移入没有下划线text-decoration: none`
+</code></pre><h3 id="7-英文行高与中午行高测量不同"><a href="#7-英文行高与中午行高测量不同" class="headerlink" title="7.英文行高与中午行高测量不同"></a>7.英文行高与中午行高测量不同</h3><h3 id="8-input是内联块状元素"><a href="#8-input是内联块状元素" class="headerlink" title="8.input是内联块状元素"></a>8.input是内联块状元素</h3><h2 id="Javascript"><a href="#Javascript" class="headerlink" title="Javascript"></a>Javascript</h2><h3 id="1-解决ie6下png问题"><a href="#1-解决ie6下png问题" class="headerlink" title="1.解决ie6下png问题"></a>1.解决ie6下png问题</h3><pre><code>`&lt;!--[if IE 6]&gt;
+&lt;script src=&quot;http://oe0rugm7g.bkt.clouddn.com/DD_belatedPNG_0.0.8a.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+DD_belatedPNG.fix(&apos;*&apos;);
+&lt;/script&gt;
+&lt;![endif]--&gt;`
+</code></pre><h3 id="2-书写js注意事项"><a href="#2-书写js注意事项" class="headerlink" title="2.书写js注意事项"></a>2.书写js注意事项</h3><p>如何在一个网站或者一个页面，去书写你的JS代码</p>
+<pre><code>`js的分层(功能):jquery(tools) 组件(ui) 应用(app) mvc(backbone.js等)
+ js的规划(管理):避免全局变量和方法(命名空间 闭包 面向对象) 模块化`
+</code></pre><h3 id="3-js代码"><a href="#3-js代码" class="headerlink" title="3.js代码"></a>3.js代码</h3><p>工具：</p>
+<pre><code>`var thaiq={};
+thaiq.tools={};
+thaiq.tools.getByClass=function(oParent,sClass){
+var aEle=oParent.getElementsByTagName(&quot;*&quot;);
+var arr=[];
+for (var i = 0; i &lt; aEle.length; i++) {
+    if(aEle[i].className==sClass){
+        arr.push(aEle[i]);
+        }
+    }
+return arr;
+}
+thaiq.tools.getStyle=function(obj,attr){
+if(obj.currentStyle){
+    return obj.currentStyle[attr];
+    }
+else{
+    return getComputedStyle(obj,false)[attr];
+    }
+}`
+</code></pre><p>组件：</p>
+<pre><code>`thaiq.ui={};
+thaiq.ui.textChange=function(obj,str){
+obj.onfocus=function(){
+    if(this.value==str){
+        this.value=&apos;&apos;;
+        }
+    };
+obj.onblur=function(){
+    if(this.value=&apos;&apos;{
+        this.value=str;
+        })
+    }
+}
+thaiq.ui.fadeIn=function(obj){
+var iCur=thaiq.tools.getStyle(obj,&apos;opacity&apos;);
+if(iCur==1){ return false;}
+
+
+var value=0;
+clearInterval(obj.timer);
+obj.timer=setInterval(function(){
+    var iSpeed=5;
+    if(value==100){
+        clearInterval(obj.timer);
+        }
+    else{
+        value+=iSpeed;
+        obj.style.opacity=value/100;
+        obj.style.filter=&apos;alpha(opacity=&apos;+value+&apos;)&apos;;
+        }
+    },30);
+}
+thaiq.ui.fadeOut=function(obj){
+var iCur=thaiq.tools.getStyle(obj,&apos;opacity&apos;);
+if(iCur==0){ return false;}
+
+
+var value=100;
+clearInterval(obj.timer);
+obj.timer=setInterval(function(){
+    var iSpeed=-5;
+    if(value==0){
+        clearInterval(obj.timer);
+        }
+        else{
+        value+=iSpeed;
+        obj.style.opacity=value/100;
+        obj.style.filter=&apos;alpha(opacity=&apos;+value+&apos;)&apos;;
+        }
+    },30);
+}
+thaiq.ui.moverLeft=function(obj,old,now){
+clearInterval(obj.timer);
+obj.timer=setInterval(function(){
+    var iSpeed=(now-old)/10;
+    iSpeed=iSpeed&gt;0?Math.ceil(iSpeed):Math.floor(iSpeed);
+    if(new==old){
+        clearInterval(obj.timer);
+        }
+        else{
+        old+=iSpeed;
+        obj.style.left=old+&quot;px&quot;;
+        }
+    },30);
+};`
+</code></pre><p>1.输入框获取焦点默认文字消失，移出文字出现</p>
+<pre><code>`thaiq.app{}
+thaiq.app.toTip=function(){
+var oText1=document.getElementById(&apos;text1&apos;);
+var oText2=document.getElementById(&apos;text2&apos;);
+thaiq.ui.textChange(oText1,&apos;Search website&apos;);
+thaiq.ui.textChange(oText2,&apos;Search website&apos;);
+}`
+</code></pre><p>2.轮播图</p>
+<pre><code>    `thaiq.app.toBanner=function(){
+    var oAd=document.getElementById(&apos;ad&apos;);
+    var aLi=oAd.getElementsByTagName(&apos;li&apos;);
+
+    var oPrevBg=thaiq.tools.getByClass(oAd,&apos;prev_bg&apos;)[0];
+    var oNextBg=thaiq.tools.getByClass(oAd,&apos;next_bg&apos;)[0];
+
+    var oPrev=thaiq.tools.getByClass(oAd,&apos;prev&apos;)[0];
+    var oNext=thaiq.tools.getByClass(oAd,&apos;next&apos;)[0];
+
+    var iNow=0;
+    var timer=setInterval(auto,3000);
+    function auto(){
+        if(iNow==aLi.length-1){
+            iNow=0;
+        }
+        else{
+            iNow++;
+        }
+        for (var i = 0; i &lt; aLi.length; i++) {
+            thaiq.ui.fadeOut(aLi[i]);
+        }
+        thaiq.ui.fadeIn(aLi[iNow]);
+    }
+    function autoPrev(){
+        if(iNow==0){
+            iNow=aLi.length-1;
+        }
+        else{
+            iNow--;
+        }
+        for (var i = 0; i &lt; aLi.length; i++) {
+            thaiq.ui.fadeOut(aLi[i]);
+        }
+        thaiq.ui.fadeIn(aLi[iNow]);
+    }
+
+    oPrevBg.onmouseover=oPrev.onmouseover=function(){
+        oPrev.style.display=&apos;block&apos;;
+        clearInterval(timer);
+    };
+    oNextBg.onmouseover=oNext.onmouseover=function(){
+        oNext.style.display=&apos;block&apos;;
+        clearInterval(timer);
+    }
+    oPrevBg.onmouseout=oPrev.onmouseout=function(){
+        oPrev.style.display=&apos;none&apos;;
+        timer=setInterval(auto,3000);
+    };
+    oNextBg.onmouseout=oNext.onmouseout=function(){
+        oNext.style.display=&apos;none&apos;;
+        timer=setInterval(auto,3000);
+    }
+    oPrev.onclick=function(){
+        autoPrev();
+    }
+    oNext.onclick=function(){
+        auto();
+    }
+}`
+</code></pre><p>3.下列选择（模拟select）</p>
+<pre><code>    `thaiq.app.toSel=function(){
+    var oSel=document.getElementById(&apos;sel1&apos;);
+    var aDd=oSel.getElementsByTagName(&apos;dd&apos;);
+    var aUl=oSel.getElementsByTagName(&apos;ul&apos;);
+    var aH2=oSel.getElementsByTagName(&apos;h2&apos;);
+    for (var i = 0; i &lt; aDd.length; i++) {
+        aDd[i].index=i;
+        aDd[i].onclick=function(ev){
+            var ev=ev||window.event;
+
+
+            var This=this;
+            for (var i = 0; i &lt; aUl.length; i++) {
+                aUl[i].style.display=&apos;none&apos;;
+            }
+            aUl[this.index].style.display=&apos;block&apos;;
+            document.onclick=function(){
+                aUl[This.index],style.display=&apos;none&apos;;
+            }
+            ev.cancleBubble=true;
+        };
+    }
+
+    for (var i = 0; i &lt; aUl.length; i++) {
+
+        aUl[i].index=i;
+
+        (function(ul){
+            var aLi=ul.getElementsByTagName(&apos;li&apos;);
+            for (var i = 0; i &lt; aLi.length; i++) {
+                aLi[i].onmouseover=function(){
+                    this.className=&apos;active&apos;
+                };
+                aLi[i].onmouseout=function(){
+                    this.className=&apos;&apos;;
+                }
+                aLi[i].onclick=function(ev){
+                    var ev=ev||window.event;
+
+                    aH2[this.oParent.index].innerHTML=this.innerHTML;
+
+                    ev.cancleBubble=true;
+                    this.parentNode.style.display=&apos;none&apos;;
+                }
+            };
+        }){aUl[i]};
+    }
+};`
+</code></pre><p>3.无缝切换</p>
+<pre><code>    `thaiq.app.toRun=function(){
+    var oRun=document.getElementById(&apos;run1&apos;);
+    var oUl=oRun.getElementsByTagName(&apos;ul&apos;)[0];
+    var aLi=oUl.getElementsByTagName(&apos;li&apos;);
+
+    var oPrev=thaiq.tools.getByClass(oRun,&apos;prev&apos;)[0];
+    var oNext=thaiq.tools.getByClass(oRun,&apos;next&apos;)[0];
+
+    var iNow=0;
+
+    oUl.innerHTML+=oUl.innerHTML;
+    oUl.style.width=aLi.length*aLi[0].offsetWidth+&apos;px&apos;;
+
+    oPrev.onclick=function(){
+        if(iNow==0){
+            iNow=aLi.length/2;
+            oUl.style.left=-oUl.offsetWidth/2+&apos;px&apos;;
+        }
+        thaiq.ui.moverLeft(oUl,-iNew*aLi[0].offsetWidth,-(iNow-1)*aLi[0].offsetWidth);
+        iNow--;
+    };
+    oNext.onclick=function(){
+        if(iNow==aLi.length/2){
+            iNow=0;
+            oUl.style.left=0;
+        }
+        thaiq.ui.moverLeft(oUl,-iNew*aLi[0].offsetWidth,-(iNow+1)*aLi[0].offsetWidth);
+        iNow++;
+    };
+};`
+</code></pre><p>加载完毕</p>
+<pre><code>    `window.onload=function(){
+    thaiq.app.toTip();
+    thaiq.app.toBanner(); 
+    thaiq.app.toSel(); 
+    thaiq.app.toRun(); 
+}`
+</code></pre>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/09/09/hello/" rel="next" title="什么时候开始都不晚">
+                <i class="fa fa-chevron-left"></i> 什么时候开始都不晚
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2016/09/26/page1/"
+     data-title="实例：一个英文网站"
+     data-content=""
+     data-url="http://yoursite.com/2016/09/26/page1/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/09/26/page1/"
+           data-title="实例：一个英文网站" data-url="http://yoursite.com/2016/09/26/page1/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="Thaiq" />
+          <p class="site-author-name" itemprop="name">Thaiq</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#HTML"><span class="nav-number">1.</span> <span class="nav-text">HTML</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#命名"><span class="nav-number">1.1.</span> <span class="nav-text">命名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-id选择器-和类选择器-的使用场景"><span class="nav-number">1.2.</span> <span class="nav-text">1.id选择器#和类选择器.的使用场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-命名规范"><span class="nav-number">1.3.</span> <span class="nav-text">2.命名规范:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-技巧"><span class="nav-number">1.4.</span> <span class="nav-text">3.技巧</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS"><span class="nav-number">2.</span> <span class="nav-text">CSS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-样式重置："><span class="nav-number">2.1.</span> <span class="nav-text">1.样式重置：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-清除浮动："><span class="nav-number">2.2.</span> <span class="nav-text">2.清除浮动：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-绝对定位居中："><span class="nav-number">2.3.</span> <span class="nav-text">3.绝对定位居中：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-定位position："><span class="nav-number">2.4.</span> <span class="nav-text">4.定位position：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-三层嵌套css"><span class="nav-number">2.5.</span> <span class="nav-text">5.三层嵌套css</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-兼容ie6："><span class="nav-number">2.6.</span> <span class="nav-text">6.兼容ie6：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-英文行高与中午行高测量不同"><span class="nav-number">2.7.</span> <span class="nav-text">7.英文行高与中午行高测量不同</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-input是内联块状元素"><span class="nav-number">2.8.</span> <span class="nav-text">8.input是内联块状元素</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Javascript"><span class="nav-number">3.</span> <span class="nav-text">Javascript</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-解决ie6下png问题"><span class="nav-number">3.1.</span> <span class="nav-text">1.解决ie6下png问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-书写js注意事项"><span class="nav-number">3.2.</span> <span class="nav-text">2.书写js注意事项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-js代码"><span class="nav-number">3.3.</span> <span class="nav-text">3.js代码</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Thaiq</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"thaiq"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
